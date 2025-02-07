@@ -31,27 +31,21 @@ O objetivo é quebrar todos os blocos sem deixar a bola cair. O jogo termina qua
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/brick-breaker.git
+   git clone https://github.com/GahCunha/-06---JS.git
    ```
 
-2. Acesse a pasta do projeto:
 
-   ```bash
-   cd brick-breaker
-   ```
-
-3. Abra o arquivo `index.html` no navegador.
+2. Abra o arquivo `index.html` no navegador.
 
 ### Rodando online
 
-Você pode jogar diretamente acessando (  ).
+Você pode jogar diretamente acessando o link: [Brick Breaker](https://06-js.vercel.app/)
 
 ## 📜 Créditos
 
-- Desenvolvido por Gabriel [Seu Sobrenome]
+- Desenvolvido por Gabriel Antunes Cunha
 - **Referências**:
-  - Código base inspirado em projetos de jogos em JavaScript.
-  - Tutoriais de física e movimentação de objetos no Canvas.
+  - Kenny Yip Coding: [Breakout Tutorial](https://www.youtube.com/watch?v=EmhkLLWAZ8E&t=1339s&ab_channel=KennyYipCoding)
 
 ## 📝 Licença
 
