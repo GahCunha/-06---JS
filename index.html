@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolinha Breakout</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="images/icon.jpg" type="image/x-icon">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Bolinha Breakout</h1>
+        <canvas id="jogo"></canvas>
+
+        <div class="controls">
+            <div class="ranking">
+                <div id="jogar">
+                    <a href="https://github.com/CaioSilvaCsv/06-JS/blob/main/README.md" target="_blank" rel="noopener noreferrer">
+                        Como Jogar
+                    </a>
+                </div>
+                <p><br>Ranking</p>
+                <ul id="ranking"></ul>
+            </div>
+
+            <div class="computer-mode">
+                <label for="checkbox">
+                    Modo Computador:
+                </label>
+                <label class="switch">
+                    <input type="checkbox" id="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* General Styles */
+:root {
+  --corborda: #2980b9;
+  --background-color: #34495e;
+  --background-color-page: #f0f0f0;
+  --text-color: #333;
+  --accent-color: #e74c3c;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--background-color-page);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Links */
+a {
+  color: var(--corborda);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Game Container */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Canvas Styling */
+canvas#jogo {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  border: 4px solid var(--corborda);
+  /* Smooth transition for aesthetic appeal */
+}
+
+/* Controls and Ranking */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.ranking {
+  width: 45%;
+  text-align: left;
+}
+
+#ranking {
+  list-style: none;
+  padding: 0;
+}
+
+#ranking li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+#ranking li:last-child {
+  border-bottom: none;
+}
+
+/* Computer Mode Switch */
+.computer-mode {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.computer-mode label {
+  margin-right: 10px;
+}
+
+/* Toggle Switch Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--corborda);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--corborda);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Dark Mode Preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --corborda: #9b59b6; /* Light purple for dark mode */
+    --background-color: #000; /* Darker background */
+    --background-color-page: #333; /* Even darker page background */
+    --text-color: #eee; /* Lighter text color */
+  }
+
+  .game-container {
+    background-color: #222222;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .game-container {
+    width: 95%;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .ranking,
+  .computer-mode {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .computer-mode {
+    justify-content: center;
+  }
+}
